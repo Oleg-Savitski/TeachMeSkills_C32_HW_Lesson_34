@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2025-02-12T14:44:39.745877600Z</date>
+  <millis>1739371479745</millis>
+  <nanos>877600</nanos>
+  <sequence>0</sequence>
+  <logger>com.teachmeskills.lesson_34.e_library_app.data.UserData</logger>
+  <level>INFO</level>
+  <class>com.teachmeskills.lesson_34.e_library_app.data.UserData</class>
+  <method>addUser</method>
+  <thread>1</thread>
+  <message>User  added -&gt; john_doe</message>
+</record>
+<record>
+  <date>2025-02-12T14:44:39.929385500Z</date>
+  <millis>1739371479929</millis>
+  <nanos>385500</nanos>
+  <sequence>1</sequence>
+  <logger>com.teachmeskills.lesson_34.e_library_app.data.BookData</logger>
+  <level>INFO</level>
+  <class>com.teachmeskills.lesson_34.e_library_app.data.BookData</class>
+  <method>addBook</method>
+  <thread>1</thread>
+  <message>Book added -&gt; Effective Java</message>
+</record>
+<record>
+  <date>2025-02-12T14:44:39.941354100Z</date>
+  <millis>1739371479941</millis>
+  <nanos>354100</nanos>
+  <sequence>2</sequence>
+  <logger>com.teachmeskills.lesson_34.e_library_app.data.ReservationData</logger>
+  <level>INFO</level>
+  <class>com.teachmeskills.lesson_34.e_library_app.data.ReservationData</class>
+  <method>addReservation</method>
+  <thread>1</thread>
+  <message>Attempting to add reservation: Reservation{id -&gt;1, bookId -&gt;1, usernameId -&gt;1, reservationDate -&gt;2023-10-01, returnDate -&gt;2023-10-15}</message>
+</record>
+<record>
+  <date>2025-02-12T14:44:40.001194100Z</date>
+  <millis>1739371480001</millis>
+  <nanos>194100</nanos>
+  <sequence>3</sequence>
+  <logger>com.teachmeskills.lesson_34.e_library_app.data.ReservationData</logger>
+  <level>INFO</level>
+  <class>com.teachmeskills.lesson_34.e_library_app.data.ReservationData</class>
+  <method>addReservation</method>
+  <thread>1</thread>
+  <message>Reservation added for book ID -&gt; 1</message>
+</record>
+<record>
+  <date>2025-02-12T14:44:40.294408600Z</date>
+  <millis>1739371480294</millis>
+  <nanos>408600</nanos>
+  <sequence>4</sequence>
+  <logger>com.teachmeskills.lesson_34.e_library_app.data.BookData</logger>
+  <level>SEVERE</level>
+  <class>com.teachmeskills.lesson_34.e_library_app.data.BookData</class>
+  <method>getAllBooks</method>
+  <thread>1</thread>
+  <message>Error retrieving all books</message>
+  <exception>
+    <message>org.postgresql.util.PSQLException: ОШИБКА: неоднозначная ссылка на столбец "id"
+  Подробности: Подразумевается ссылка на переменную PL/pgSQL или столбец таблицы.
+  Где: функция PL/pgSQL get_all_books(), строка 3, оператор RETURN QUERY</message>
+    <frame>
+      <class>org.postgresql.core.v3.QueryExecutorImpl</class>
+      <method>receiveErrorResponse</method>
+      <line>2733</line>
+    </frame>
+    <frame>
+      <class>org.postgresql.core.v3.QueryExecutorImpl</class>
+      <method>processResults</method>
+      <line>2420</line>
+    </frame>
+    <frame>
+      <class>org.postgresql.core.v3.QueryExecutorImpl</class>
+      <method>execute</method>
+      <line>372</line>
+    </frame>
+    <frame>
+      <class>org.postgresql.jdbc.PgStatement</class>
+      <method>executeInternal</method>
+      <line>517</line>
+    </frame>
+    <frame>
+      <class>org.postgresql.jdbc.PgStatement</class>
+      <method>execute</method>
+      <line>434</line>
+    </frame>
+    <frame>
+      <class>org.postgresql.jdbc.PgPreparedStatement</class>
+      <method>executeWithFlags</method>
+      <line>194</line>
+    </frame>
+    <frame>
+      <class>org.postgresql.jdbc.PgPreparedStatement</class>
+      <method>executeQuery</method>
+      <line>137</line>
+    </frame>
+    <frame>
+      <class>com.teachmeskills.lesson_34.e_library_app.data.BookData</class>
+      <method>getAllBooks</method>
+      <line>64</line>
+    </frame>
+    <frame>
+      <class>com.teachmeskills.lesson_34.e_library_app.app.LibraryApp</class>
+      <method>main</method>
+      <line>45</line>
+    </frame>
+  </exception>
+</record>
+<record>
+  <date>2025-02-12T14:44:40.296402900Z</date>
+  <millis>1739371480296</millis>
+  <nanos>402900</nanos>
+  <sequence>5</sequence>
+  <logger>com.teachmeskills.lesson_34.e_library_app.app.LibraryApp</logger>
+  <level>SEVERE</level>
+  <class>com.teachmeskills.lesson_34.e_library_app.app.LibraryApp</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>An error occurred -&gt; Error retrieving all books</message>
+</record>
+</log>
