@@ -9,3 +9,19 @@ Task:
  - Readers (id, name, email)
 
  - Reservations (id, book id, reader id, booking date, return date)
+
+ - Функция для логирования действий:
+CREATE OR REPLACE FUNCTION log_user_action() 
+RETURNS TRIGGER AS $$
+BEGIN
+    IF TG_OP = 'UPDATE' THEN
+        INSERT INTO logs (action, username_id) 
+        VALUES ('UPDATE', OLD.id);  -- Используем OLD.id для идентификатора пользователя
+        RETURN NEW;
+    ELSIF TG_OP = 'DELETE' THEN
+        INSERT INTO logs (action, username_id) 
+        VALUES ('DELETE', OLD.id);  -- Используем OLD.id для идентификатора пользователя
+        RETURN OLD;
+    END IF;
+END;
+$$ LANGUAGE plpgsql;
