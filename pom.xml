@@ -20,6 +20,30 @@
             <artifactId>postgresql</artifactId>
             <version>42.7.4</version>
         </dependency>
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-database-postgresql</artifactId>
+            <version>11.3.0</version>
+        </dependency>
     </dependencies>
+
+    <build>
+        <finalName>e_library</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>11.3.1</version>
+                <configuration>
+                    <url>jdbc:postgresql://localhost:5432/e_library</url>
+                    <user>postgres</user>
+                    <password>legendog</password>
+                    <cleanDisabled>true</cleanDisabled>
+                    <baselineVersion>1.0.0</baselineVersion>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
 
 </project>
