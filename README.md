@@ -9,3 +9,7 @@ Task:
  - Readers (id, name, email)
 
  - Reservations (id, book id, reader id, booking date, return date)
+
+
+FlyWay is connected to the project.
+Implemented database migration.
